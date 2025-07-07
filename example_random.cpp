@@ -77,7 +77,7 @@ void combs(vector<int>& simp,set<vector<int>>& ans){
 
 void check_parameters(double p, int d, int n){
 
-    auto v = random_complex(0.02,2,100);
+    auto v = random_complex(p,d,n);
     //print_complex(v);
     set<vector<int>> s_pre;
     for(auto simplex:v)
@@ -93,6 +93,11 @@ void check_parameters(double p, int d, int n){
 }
 
 int main() {
+    check_parameters(0.5,2,100);
+    check_parameters(0.95,2,30);
+    check_parameters(0.05,2,100);
+    check_parameters(0.7,3,50);
+    check_parameters(0.99,10,20);
     check_parameters(0.02,2,100);
     return 0;
 }
